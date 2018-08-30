@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
-require "tree_printer/version"
+require 'tree_printer/version'
+require 'tree_printer/interfaces/inode'
+require 'tree_printer/tree'
+require 'tree_printer/tree_leaf'
+require 'tree_printer/treeorizer'
+
+require 'pry-byebug'
 
 class TreePrinter
   VERSION = '0.1.0'
@@ -12,6 +18,8 @@ class TreePrinter
   end
 
   def print(tree)
+    tree = Treeorizer.process(tree) if tree.is_a?(Hash)
+
     reset_result!
     build_result(tree)
     result.each { |str| puts str }
