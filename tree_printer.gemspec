@@ -5,7 +5,7 @@ require 'tree_printer/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'tree_printer'
-  spec.version       = TreePrinter::VERSION
+  spec.version       = '0.1.0'
   spec.authors       = ['Alexander Brjakin']
   spec.email         = ['digitoider@gmail.com']
 
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   a class, that follows tree interface, described in README.md }
   spec.description   = %q{ This gem allows you to print tree structure
   of a passed hash or a class, that implements basic tree interface}
-  spec.homepage      = 'github.com/digitoider/tree_printer'
+  spec.homepage      = 'https://github.com/digitoider/tree_printer'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -35,6 +35,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'rake", '~> 10.0'
-  spec.add_development_dependency 'rspec", '~> 3.0'
+  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec', '~> 3.0'
 end
